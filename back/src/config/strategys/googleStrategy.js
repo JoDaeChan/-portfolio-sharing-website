@@ -4,8 +4,7 @@ import { User } from "../../db";
 const config = {
 	clientID:
 		"291814284793-svmf2fi8v22k4i09g1flkanm35g8s5d6.apps.googleusercontent.com",
-	clientSecret: "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",
-	//todo 환경변수 넣기
+	clientSecret: "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"
 };
 async function findOrCreateUser({ name, email }) {
 	const user = await User.findByEmail({ email });
