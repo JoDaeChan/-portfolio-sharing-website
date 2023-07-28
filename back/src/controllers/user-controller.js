@@ -19,7 +19,7 @@ const singUpUser = async (req, res, next) => {
             throw new Error(createUser.errorMessage);
         }
 
-        res.status(StatusCodes.CREATED).json(createUser);
+        res.status(StatusCodes.CREATED).send(createUser);
     } catch (error) {
         next(error);
     }
@@ -115,7 +115,7 @@ const logoutUser = async (req, res, next) => {
     }
 };
 
-//todo 회원탈퇴시 게시물 삭제
+//todo 회원탈퇴 시 게시물 삭제
 /** @description 회원탈퇴 */
 const deleteUser = async (req, res, next) => {
     try {

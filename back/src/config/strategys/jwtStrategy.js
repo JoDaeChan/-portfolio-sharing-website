@@ -23,4 +23,5 @@ const jwt = new JwtStrategy(jwtOptions, async (payload, done) => {
     }
 });
 
-export { jwt };
+module.exports = jwt;
+// export { jwt };
